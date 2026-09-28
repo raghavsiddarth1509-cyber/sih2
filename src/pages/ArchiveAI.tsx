@@ -37,7 +37,11 @@ export default function ArchiveAI() {
 
   return (
     <>
-      <VideoModal isOpen={videoOpen} onClose={() => setVideoOpen(false)} />
+      <VideoModal
+        isOpen={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        videoSrc="/assets/videos/sih-demo.mp4"
+      />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-12">
         {/* Evaluator Resources Banner */}
@@ -60,6 +64,7 @@ export default function ArchiveAI() {
               </div>
               <div className="flex items-center flex-shrink-0">
                 <button
+                  type="button"
                   onClick={() => setVideoOpen(true)}
                   className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold text-xs px-4 py-2.5 rounded-lg shadow-sm transition-colors cursor-pointer"
                 >

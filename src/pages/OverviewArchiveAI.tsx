@@ -67,7 +67,11 @@ export default function OverviewArchiveAI() {
 
   return (
     <>
-      <VideoModal isOpen={videoOpen} onClose={() => setVideoOpen(false)} />
+      <VideoModal
+        isOpen={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        videoSrc="/assets/videos/sih-demo.mp4"
+      />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-8 space-y-8">
 
@@ -420,6 +424,7 @@ export default function OverviewArchiveAI() {
                 </div>
                 <div className="flex items-center flex-shrink-0">
                   <button
+                    type="button"
                     onClick={() => setVideoOpen(true)}
                     className="inline-flex items-center gap-2 bg-secondary-container hover:bg-secondary text-on-primary font-semibold text-xs px-5 py-2.5 rounded-xl shadow-sm transition-all cursor-pointer"
                   >
