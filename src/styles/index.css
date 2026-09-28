@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #1F2937;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .font-heritage {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  /* Pill / Chip tags */
+  .pill-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* Card base */
+  .card-base {
+    @apply bg-white border border-[#E8E3DA] rounded-xl shadow-xs;
+  }
+
+  .card-hover {
+    @apply hover:border-amber-400 transition-colors duration-150;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-[11px] uppercase tracking-widest font-mono font-semibold text-amber-700;
+  }
+
+  /* Institutional button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-[#0A1118] text-white hover:bg-black font-medium text-xs md:text-sm px-5 py-2.5 rounded shadow-sm transition;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-white hover:bg-gray-50 border border-gray-300 text-gray-700 font-medium text-xs md:text-sm px-4 py-2.5 rounded shadow-xs transition;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 bg-[#D97706] hover:bg-[#b45309] text-white font-bold text-xs px-5 py-3 rounded shadow transition uppercase tracking-wider;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5B99B;
+}
+
+/* Video modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Progress bar animation */
+@keyframes progress-fill {
+  from { width: 0%; }
+  to { width: var(--target-width); }
+}
