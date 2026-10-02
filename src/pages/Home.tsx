@@ -419,13 +419,15 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <Link
-              to="/overview"
+            <a
+              href="https://drambedkar-project.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 whitespace-nowrap bg-secondary-container hover:bg-secondary text-on-primary font-semibold text-xs px-5 py-2.5 rounded-xl transition-all shadow-sm"
             >
               <span>Explore Prototype</span>
               <span className="text-base">→</span>
-            </Link>
+            </a>
           </div>
         </div>
 
